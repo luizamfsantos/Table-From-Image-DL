@@ -40,6 +40,7 @@ configobj==5.0.8
 contourpy==1.2.1
 cryptography==42.0.7
 cycler==0.12.1
+DateTime==5.5
 debugpy==1.8.1
 decorator==5.1.1
 defusedxml==0.7.1
@@ -232,4 +233,5 @@ wrapt==1.16.0
 yarl==1.9.4
 zc.lockfile==3.0.post1
 zipp==3.19.0
+zope.interface==6.4.post2
 -e .
