@@ -39,12 +39,12 @@ This project is a combination of classification, detection, and recognition task
 
 ## Workflows
 
-OK 1. Update config.yaml with the path to the image you want to convert to a table
-NOT NECESSARY YET 2. Update secrets.yaml 
-OK 3. Update params.yaml
-OK 4. Update the entity
-OK 5. Update the configuration manager in src config
-OK 6. Update the components
+1. Update config.yaml with the path to the image you want to convert to a table [OK - 2024-05-30]
+2. Update secrets.yaml [NOT NECESSARY YET - 2024-05-30]
+3. Update params.yaml [NOT NECESSARY YET - 2024-05-30]
+4. Update the entity [OK - 2024-05-30]
+5. Update the configuration manager in src config [OK - 2024-05-30]
+6. Update the components [OK - 2024-05-30]
 7. Update the pipeline
 8. Update the main.py
 9. Update the dvc.yaml
