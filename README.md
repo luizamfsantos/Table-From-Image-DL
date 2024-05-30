@@ -36,21 +36,21 @@ git clone https://github.com/luizamfsantos/Table-From-Image-DL-MLflow-DVC
 2. Create a virtual environment
 
 ```bash
-python3 -m venv cnncls
+python3 -m venv tbldtc
 ```
 or 
 ```bash
-conda create -n cnncls python=3.12 -y
+conda create -n tbldtc python=3.12 -y
 ```
 
 3. Activate the virtual environment
 
 ```bash
-source cnncls/bin/activate
+source tbldtc/bin/activate
 ```
 or 
 ```bash
-conda activate cnncls
+conda activate tbldtc
 ```
 
 4. Install the requirements

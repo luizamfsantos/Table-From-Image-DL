@@ -8,7 +8,7 @@ __version__ = '0.0.0'
 
 REPO_NAME = 'Table-From-Image-DL-MLflow-DVC'
 AUTHOR_USER_NAME = 'luizamfsantos'
-SRC_REPO = 'cnnClassifier'
+SRC_REPO = 'tableDecoder'
 AUTHOR_EMAIL = 'luiza.marques_@hotmail.com'
 
 
