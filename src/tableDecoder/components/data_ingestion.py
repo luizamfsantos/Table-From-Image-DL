@@ -3,6 +3,7 @@ from tableDecoder.utils.common import get_size
 import zipfile
 import gdown
 from tableDecoder import logger
+from tableDecoder.entity.config_entity import DataIngestionConfig
 
 class DataIngestion:
     def __init__(self, config: DataIngestionConfig):
