@@ -39,10 +39,10 @@ This project is a combination of classification, detection, and recognition task
 
 ## Workflows
 
-1. Update config.yaml with the path to the image you want to convert to a table
+OK 1. Update config.yaml with the path to the image you want to convert to a table
 2. Update secrets.yaml 
 3. Update params.yaml
-4. Update the entity
+OK 4. Update the entity
 5. Update the configuration manager in src config
 6. Update the components
 7. Update the pipeline
