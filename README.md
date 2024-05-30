@@ -10,6 +10,19 @@ Imagine you're trying to scrape data from a website and all their tables are in 
 
 
 
+## Workflows
+
+1. Update config.yaml with the path to the image you want to convert to a table
+2. Update secrets.yaml 
+3. Update params.yaml
+4. Update the entity
+5. Update the configuration manager in src config
+6. Update the components
+7. Update the pipeline
+8. Update the main.py
+9. Update the dvc.yaml
+10. Add app.py
+
 ## How to run?
 
 ### STEPS:
