@@ -26,29 +26,24 @@ Turning an image into a table using a Convolutional Neural Network (CNN) involve
 2. **Object Detection Models:** These models (often based on CNNs) are used for detecting table boundaries and individual cells.
 3. **OCR Models:** OCR is crucial for recognizing and extracting text from the detected cells. Models like Tesseract or specialized deep learning-based OCR models (e.g., CRNN, Attention-OCR) are commonly used.
 
-### Example Workflow:
-1. **Table Detection:** Use a CNN-based object detection model to identify and segment the table from the image.
-2. **Cell Detection:** Apply another object detection model to locate individual cells within the detected table.
-3. **OCR:** Use an OCR model to extract text from each detected cell.
-4. **Post-Processing:** Organize the extracted text into a structured table format.
-
 ### Summary:
 This project is a combination of classification, detection, and recognition tasks. While CNNs are crucial for feature extraction and initial segmentation/detection tasks, the overall system integrates various specialized models and techniques to achieve the final goal of converting an image into a table. Therefore, it's not just a classifier but a composite system involving several machine learning components.
 
 
 
-## Workflows
+## Workflow:
+1. **Data Ingestion:** Use the price tables from this [website](https://www.ceasacampinas.com.br/sites/ceasacampinas.com.br/files/cotacoes/), which provides agricultural prices in São Paulo, Brazil from Ceasa Campinas. These tables inspired my project. Some of the challenge with this data is that the tables have some formatting issues. They are not perfectly aligned, and some entries have multiple titles and keys. For example, "brocolis" might be listed twice: once for type A and once for type B. Instead of specifying "brocolis A" and "brocolis B", the table lists "brocolis" on one line, then indents "type A" and "type B" underneath it.
+   - Later, it'll be good to expand to other tables and file formats. 
+2. **Pre-processing:** Turn the pdf into images using [pdf2image](https://pypi.org/project/pdf2image/). Reduce the size of the images and reduce the color complexity (if exists).
+3. **Table Detection:** Use a CNN-based object detection model to identify and segment the table from the image.
+   - The plan will be to use [OpenCV](https://github.com/opencv/opencv-python) package for Python. They have a module called objdetect for object detection.
+4. **Cell Detection:** Apply another object detection model to locate individual cells within the detected table.
+- The plan will be to also use [OpenCV](https://github.com/opencv/opencv-python) package for Python. 
+5. **OCR:** Use an OCR model to extract text from each detected cell.
+   - The plan will be to use [EasyOCR](https://github.com/JaidedAI/EasyOCR) to do this step. They use the CRAFT algorithm and pre-trained model and the deep learning execution is using Pytorch.
+6. **Post-Processing:** Organize the extracted text into a structured table format.
+7. **Load Data:** Finish by loading table to PostgreSQL or some other DB or even file format such as .csv.
 
-1. Update config.yaml with the path to the image you want to convert to a table [OK - 2024-05-30]
-2. Update secrets.yaml [NOT NECESSARY YET - 2024-05-30]
-3. Update params.yaml [NOT NECESSARY YET - 2024-05-30]
-4. Update the entity [OK - 2024-05-30]
-5. Update the configuration manager in src config [OK - 2024-05-30]
-6. Update the components [OK - 2024-05-30]
-7. Update the pipeline
-8. Update the main.py
-9. Update the dvc.yaml
-10. Add app.py
 
 ## How to run?
 
